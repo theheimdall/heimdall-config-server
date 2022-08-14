@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: heimdall-config-server
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/theheimdall/heimdall-configuration
+          search-paths: '{application}'
+server:
+  port: 8888
+  servlet:
+    context-path: /config
